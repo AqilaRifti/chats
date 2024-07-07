@@ -1,5 +1,4 @@
 import streamlit as st
-import ploomber_cloud
 st.set_page_config(
     page_title="Petunjuk",
     page_icon="🧭",
