@@ -6,6 +6,6 @@ COPY . .
 RUN pip install --requirement requirements.txt && pip cache purge
 
 ARG PORT
-EXPOSE ${PORT:-8000}
+EXPOSE ${PORT:-8080}
 
-CMD streamlit run --server.port ${PORT:-8000} 🧭_Petunjuk.py
+CMD streamlit run --server.port ${PORT:-8080} 🧭_Petunjuk.py
