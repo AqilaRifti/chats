@@ -6,4 +6,3 @@ chromadb==0.4.24
 streamlit
 requests
 pysqlite3-binary
-pysqlite3
