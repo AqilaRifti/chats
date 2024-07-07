@@ -1,9 +1,5 @@
 import streamlit as st
 # these three lines swap the stdlib sqlite3 lib with the pysqlite3 package
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
 st.set_page_config(
     page_title="Petunjuk",
     page_icon="🧭",
