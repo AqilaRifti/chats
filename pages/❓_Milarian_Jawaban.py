@@ -44,6 +44,7 @@ def get_context_ai21(
         k: Optional[int] = MAX_EMBEDDING_RESULT
     ) -> List[str]:
     client = Chroma(persist_directory=embedding_database_path, embedding_function=embedding_function)
+
     results = client.similarity_search(query=query, k=k)
 
     return "".join([result.page_content for result in results])
