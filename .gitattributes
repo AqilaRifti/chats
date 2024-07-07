@@ -1,0 +1,7 @@
+chromadb/chroma.sqlite3 filter=lfs diff=lfs merge=lfs -text
+chromadb/401b94b6-951c-4729-9990-bd9bbeb9d680/length.bin filter=lfs diff=lfs merge=lfs -text
+chromadb/401b94b6-951c-4729-9990-bd9bbeb9d680/index_metadata.pickle filter=lfs diff=lfs merge=lfs -text
+chromadb/401b94b6-951c-4729-9990-bd9bbeb9d680/header.bin filter=lfs diff=lfs merge=lfs -text
+chromadb/401b94b6-951c-4729-9990-bd9bbeb9d680/data_level0.bin filter=lfs diff=lfs merge=lfs -text
+chromadb/401b94b6-951c-4729-9990-bd9bbeb9d680/link_lists.bin filter=lfs diff=lfs merge=lfs -text
+*.bin filter=lfs diff=lfs merge=lfs -text
