@@ -9,7 +9,7 @@ from langchain_ai21 import AI21Embeddings
 from langchain_core.embeddings import Embeddings
 from langchain.vectorstores.chroma import Chroma
 from chromadb.config import Settings
-
+import os
 MAX_EMBEDDING_RESULT = 5
 
 AI21_EMBEDDING_DATABASE_PATH = "chromadb"
@@ -105,7 +105,7 @@ if "milarian_jawaban_messages" not in st.session_state:
 def send_message(message):
     st.session_state["milarian_jawaban_messages"].append(message)
 
-
+st.write(os.path.exists("chromadb"))
 
 if prompt := st.chat_input():
     send_message({"role": "user", "content": prompt})
