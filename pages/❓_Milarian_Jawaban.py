@@ -8,6 +8,9 @@ from typing import Optional, List
 from langchain_ai21 import AI21Embeddings
 from langchain_core.embeddings import Embeddings
 from langchain.vectorstores.chroma import Chroma
+from chromadb.config import Settings
+
+
 
 MAX_EMBEDDING_RESULT = 5
 
@@ -43,7 +46,7 @@ def get_context_ai21(
         embedding_function: Optional[Embeddings] = AI21_DEFAULT_EMBEDDINGS_FUNCTION,
         k: Optional[int] = MAX_EMBEDDING_RESULT
     ) -> List[str]:
-    client = Chroma(persist_directory=embedding_database_path, embedding_function=embedding_function)
+    client = Chroma(persist_directory=embedding_database_path, embedding_function=embedding_function, client_settings= Settings( anonymized_telemetry=False, is_persistent=True, ))
 
     results = client.similarity_search(query=query, k=k)
 
