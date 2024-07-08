@@ -3,7 +3,7 @@ FROM python:3.11-slim
 
 WORKDIR /app
 COPY . .
-RUN python -m venv vm && ./vm/bin/activate
+RUN python -m venv vm && sudo ./vm/bin/activate
 RUN pip install --requirement requirements.txt && pip cache purge
 
 ARG PORT
