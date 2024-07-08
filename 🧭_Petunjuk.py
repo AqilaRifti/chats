@@ -1,4 +1,6 @@
+import sys
 import streamlit as st
+sys.path.append("")
 # these three lines swap the stdlib sqlite3 lib with the pysqlite3 package
 st.set_page_config(
     page_title="Petunjuk",
